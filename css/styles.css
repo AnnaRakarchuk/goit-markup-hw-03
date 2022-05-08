@@ -19,6 +19,10 @@
   --dark-bg-cl: #2f303a;
   --bgd-button: #2196f3;
   --secondary-bgd-button: #188ce8;
+
+  /*border-colors*/
+  --border-header:#ECECEC;
+  --border-cards-portfolio:#eeeeee;
 }
 
 body {
@@ -86,11 +90,10 @@ img {
 | Header section
 -------------------*/
 .header {
-  border: 1px solid rgba(236, 236, 236, 1);
+  border-bottom: 1px solid var(--border-header);
 }
 .header-container {
   display: flex;
-  align-items: center;
 }
 .navigation {
   display: flex;
@@ -148,7 +151,7 @@ img {
 .contacts-item {
   margin-right: 50px;
 }
-.contacts-item:nth-last-child {
+.contacts-item:last-child {
   margin-right: 0;
 }
 
@@ -191,10 +194,8 @@ img {
 }
 
 .hero-btn {
-  padding-top: 10px;
-  padding-right: 32px;
-  padding-bottom: 10px;
-  padding-left: 32px;
+  padding: 10px 32px;
+  border: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
@@ -223,8 +224,6 @@ img {
 }
 .benefits-list {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
 }
 .benefits-item {
   width: 270px;
@@ -286,6 +285,9 @@ img {
 .team-item {
   margin-right: 30px;
   background-color: var(--main-bg-cl);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-item:last-child {
   margin-right: 0;
@@ -293,9 +295,6 @@ img {
 .members-group {
   padding-top: 30px;
   padding-bottom: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 
 .members-title {
@@ -348,6 +347,9 @@ img {
 .footer-item {
   margin-bottom: 9px;
 }
+.footer-item:last-child{
+  margin-bottom: 0;
+}
 .footer-contact-item {
   font-weight: 400;
   font-size: 14px;
@@ -366,14 +368,13 @@ img {
 .portfolio-list {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 50px;
 }
 .portfolio-item {
   margin-right: 8px;
 }
 .portfolio-item:last-child {
-  margin-left: 0;
+  margin-right: 0;
 }
 .portfolio-btn {
   padding-top: 6px;
@@ -428,10 +429,11 @@ img {
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--border-cards-portfolio);
   border-top: none;
 }
 .cards-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
